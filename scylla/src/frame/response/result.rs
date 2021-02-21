@@ -479,7 +479,7 @@ fn deser_rows(buf: &mut &[u8]) -> StdResult<Rows, ParseError> {
     })
 }
 
-#[allow(clippy::unnecessary_wraps)]
+#[allow(clippy::unnecessary_unwrap)]
 fn deser_set_keyspace(_buf: &mut &[u8]) -> StdResult<SetKeyspace, ParseError> {
     Ok(SetKeyspace {}) // TODO
 }
@@ -497,7 +497,7 @@ fn deser_prepared(buf: &mut &[u8]) -> StdResult<Prepared, ParseError> {
     })
 }
 
-#[allow(clippy::unnecessary_wraps)]
+#[allow(clippy::unnecessary_unwrap)]
 fn deser_schema_change(_buf: &mut &[u8]) -> StdResult<SchemaChange, ParseError> {
     Ok(SchemaChange {}) // TODO
 }
